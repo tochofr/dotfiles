@@ -15,6 +15,7 @@ Plugin 'SirVer/ultisnips'        " Ultinsips plugin
 Plugin 'honza/vim-snippets'      " Snippets (used by Ultisnips)
 Plugin 'Lokaltog/vim-powerline'      " Snippets (used by Ultisnips)
 Plugin 'puppetlabs/puppet-syntax-vim'      " Snippets (used by Ultisnips)
+Plugin 'zainin/vim-mikrotik'      
 " ----- End plugin install
 call vundle#end()            
 filetype plugin indent on    
