@@ -38,3 +38,7 @@ fi
 $vimCmd +PluginInstall +qall
 rm -fr $vimColors
 # === Vim Section ===
+
+# === Bash section ===
+cp -r bashrc ~/.bashrc
+cp -r bash_profile ~/.bash_profile
