@@ -80,6 +80,9 @@ set t_vb=
 set fileformats=unix,dos,mac
 set ff=unix
 
+" No swap file
+set noswapfile
+
 " Pulsando jj sale del modo edición
 inoremap jj <ESC>
 nnoremap JJJJ <Nop>
