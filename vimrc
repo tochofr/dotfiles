@@ -1,7 +1,6 @@
 " ************* VIM CONFIG FILE *************
 set nocompatible
 
-
 " ############# BUNDLE SECTION ############# 
 filetype off 
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -18,29 +17,41 @@ Plugin 'puppetlabs/puppet-syntax-vim'      " Snippets (used by Ultisnips)
 Plugin 'zainin/vim-mikrotik'      
 " ----- End plugin install
 call vundle#end()            
-filetype plugin indent on    
 " ############# END BUNDLE SECTION #############
 
 " ############# BASIC SETTINGS ############# 
-set number
+set number                      " show line numbers
 set ruler
-set nowrap
-set background=dark
+set nowrap                      " no wrap large lines
+"set background=dark
 set t_Co=256 "Move pending
 set encoding=utf-8
 set termencoding=utf-8
 set fillchars+=stl:\ ,stlnc:\
 syntax on
-set autoindent
+
 set showcmd		
 set nobackup
 set laststatus=2
 
 "Hightlight current cursor line
 set cul
-hi CursorLine term=none cterm=none ctermbg=8
+"hi CursorLine term=none cterm=none ctermbg=8   " Gray background
+hi CursorLine term=none cterm=none ctermbg=4    " Blue background (16 colors)
+"hi CursorLine term=none cterm=none ctermbg=19  " Blue background 
 
-" Highlight brackets
+set list                        " show invisible characters
+set listchars=tab:>·,trail:·    " but only show tabs and trailing whitespace
+
+" Indent options
+set autoindent
+set smartindent
+set shiftround                  " always round indents to multiple of shiftwidth
+set copyindent                  " use existing indents for new indents
+set preserveindent              " save as much indent structure as possible
+filetype plugin indent on
+
+" Show matching brackets 
 set showmatch		
 
 " Ignore case in searchs
@@ -109,7 +120,10 @@ if has("gui_running")
         set guifont=Source\ Code\ Pro\ for\ Powerline:h15
     endif
 endif
+
 colorscheme Tomorrow-Night-Bright
+
+
 
 " ULTISNIPS SETTINGS 
 let g:UltiSnipsExpandTrigger="<tab>"
