@@ -34,6 +34,7 @@ fi
 alias ls='ls $LS_OPTIONS'
 alias ll='ls $LS_OPTIONS -l -h'
 alias l='ls $LS_OPTIONS -lA'
+alias youtube-dl-mp3='youtube-dl --extract-audio --audio-format mp3 '
 # ==== End Aliases section ====
 
 # ====== Custom functions section ======
