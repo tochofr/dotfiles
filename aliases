@@ -1,0 +1,28 @@
+# vim: set syntax=sh:
+
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias -- -="cd -"
+
+alias dl="cd ~/Downloads"
+alias lsd="ls -lF ${colorflag} | grep --color=never '^d'"
+
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+
+if [[ $curPlatform == "Darwin" ]]; then
+    export LS_OPTIONS='-G'
+else
+    export LS_OPTIONS='--color=auto'
+    eval "`dircolors`"
+fi
+
+alias ls='ls $LS_OPTIONS'
+alias ll='ls $LS_OPTIONS -l -h'
+alias l='ls $LS_OPTIONS -lA'
+alias youtube-dl-mp3='youtube-dl --extract-audio --audio-format mp3 '

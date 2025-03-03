@@ -25,16 +25,10 @@ if [ -z ${LC_ALL+x} ]; then export LC_ALL="${lang}"; fi
 # ==== End Locales section ==== 
 
 # ====== Aliases section ======
-if [[ $curPlatform == "Darwin" ]]; then
-    export LS_OPTIONS='-G'
-else
-    export LS_OPTIONS='--color=auto'
-    eval "`dircolors`"
+# Aliases was moved to a separate file
+if [ -f ~/.aliases ]; then
+    source ~/.aliases
 fi
-alias ls='ls $LS_OPTIONS'
-alias ll='ls $LS_OPTIONS -l -h'
-alias l='ls $LS_OPTIONS -lA'
-alias youtube-dl-mp3='youtube-dl --extract-audio --audio-format mp3 '
 # ==== End Aliases section ====
 
 # ====== Custom functions section ======

@@ -42,3 +42,4 @@ rm -fr $vimColors
 # === Bash section ===
 cp -r bashrc ~/.bashrc
 cp -r bash_profile ~/.bash_profile
+cp -r aliases ~/.aliases
